@@ -1,5 +1,5 @@
 :root {
-	--primary: #EA40A4;
+	--primary: #609e58;
 	--business: #3A82EE;
 	--personal: var(--primary);
 	--light: #EEE;
@@ -9,8 +9,8 @@
 
 	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
-	--business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
-	--personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+	--business-glow: 0px 0px 4px #3a82eebf;
+	--personal-glow: 0px 0px 4px #518b4aed;
 }
 
 * {
@@ -31,6 +31,12 @@ input:not([type="radio"]):not([type="checkbox"]), button {
 body {
 	background: var(--light);
 	color: var(--dark);
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 100%;
+	min-height: 100%;
 }
 
 section {
@@ -246,3 +252,35 @@ input:checked ~ .bubble::after {
 	text-decoration: line-through;
 	color: var(--grey);
 }
+
+@media only screen and (max-width: 600px) {
+	body {
+		padding: 0 5rem;
+		min-width: 100%;
+		min-height: 100%;
+	}
+	section {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+		padding-left: 0.6rem;
+		padding-right: 0.6em;
+	}
+	.greeting .title,
+	.greeting .title input {
+		font-size: 1.2rem;
+	}
+	h3 {
+		text-align: center;
+	  font-size: 0.8rem;
+	}
+	h4 {
+		text-align: center;
+	  font-size: 0.75rem;
+	}
+	.create-todo input[type="text"] {
+	  font-size: 0.9rem;
+	}
+	.greeting .title input {
+	  font-size: 1.2rem;
+	}
+  }
