@@ -41,20 +41,24 @@
 					</label>
 				</div>
 
-				<div class="category-alert" v-if="required_alert">
-					Elegir un nombre para el item y seleccionar una categoria
-				</div>
+				<ul v-auto-animate>
+					<div class="category-alert" v-if="required_alert">
+						Elegir un nombre para el ITEM y seleccionar una CATEGORIA
+					</div>
 
-				<br v-if="required_alert" />
+					<br v-if="required_alert" />
 
-				<input type="submit" value="Agregar a la lista" />
+
+					<input type="submit" value="Agregar a la lista" />
+				</ul>
+
 			</form>
 		</section>
 
 		<section class="todo-list">
-			<h3 v-if="todos_asc.length">Tu lista pendiente:</h3>
-			<div class="list">
-				<div v-for="todo in todos_asc" :key="todo" :class="`todo-item ${todo.done && 'done'}`">
+			<h4 v-if="todos_asc.length">Tu lista pendiente:</h4>
+			<ul v-auto-animate class="list">
+				<li v-for="todo in todos_asc" :key="todo" :class="`todo-item ${todo.done && 'done'}`">
 					<label>
 						<input type="checkbox" v-model="todo.done" />
 						<span :class="`bubble ${todo.category}`"></span>
@@ -67,8 +71,8 @@
 					<div class="actions">
 						<button class="delete" @click="removeTodo(todo)">Borrar</button>
 					</div>
-				</div>
-			</div>
+				</li>
+			</ul>
 		</section>
   </main>
 </template>
