@@ -10,3 +10,5 @@ Es fácil de usar y te ayudará a mantenerte organizado.
 - Html
 - CSS
 - LocalStorage
+
+<a href="https://todo-vue3-compositionapi.netlify.app/" target="_blank">Web</a>
